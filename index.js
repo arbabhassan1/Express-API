@@ -12,6 +12,15 @@ app.get("/", (req, res) => {
   res.send(data);
 });
 
+app.get("/fetch", (req, res) => {
+  let { url, site } = req.query;
+  console.log(url, site);
+  res.send({
+    url: url,
+    site: site,
+  });
+});
+
 app.listen(3434, () => {
   console.log("Server is Live!");
 });
