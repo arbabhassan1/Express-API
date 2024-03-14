@@ -5,7 +5,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   let data = {
-    name: "Express API",
+    name: "Express API for Video Downloader",
     version: "v 1.0.0",
     project: "testing",
   };
