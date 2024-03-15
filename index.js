@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { Instagram } from "social-downloader-cherry";
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -18,24 +18,31 @@ app.get("/", (req, res) => {
 
 // app.get("/fetch", async (req, res) => {
 //   let { url, site } = req.query;
-
 //   try {
-//     const videodata = await getdata(url, site);
-//     let mystatus = videodata.status;
-
-//     const responseObject = {
-//       videodata: videodata,
-//       media: site,
-//       status: mystatus,
-//     };
-
-//     res.json(responseObject);
-//   } catch (error) {
-//     console.error("Error:", error);
-
-//     // Send an error response
-//     res.status(500).json({ error: "Internal Server Error" });
+//     let links = await instagramGetUrl(url);
+//     console.log(links);
+//     res.json(links);
+//   } catch {
+//     console.log("Error");
 //   }
+
+//   //   try {
+//   //     const videodata = await getdata(url, site);
+//   //     let mystatus = videodata.status;
+
+//   //     const responseObject = {
+//   //       videodata: videodata,
+//   //       media: site,
+//   //       status: mystatus,
+//   //     };
+
+//   //     res.json(responseObject);
+//   //   } catch (error) {
+//   //     console.error("Error:", error);
+
+//   //     // Send an error response
+//   //     res.status(500).json({ error: "Internal Server Error" });
+//   //   }
 // });
 
 app.listen(3434, () => {
